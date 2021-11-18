@@ -1,0 +1,11 @@
+0.（更改结果保存目录）又改回来了，主要问题不在于此，在1
+1.注意(scripts/batch_eval_KB_completion.py)中的topk参数会影响排序返回，为了节约内存，这里改成400因为画图的时候
+箱线图也只画到350
+2. 更改结果保存大小，只保存logit前10大的。lama/evaluation_metrics.py, 加入新参数keep_original_topk
+
+
+11.17
+更改transformer-xl配置文件，改用以前版本的，现在可以用了
+完成 transfo-xl google-RE squad
+完成bert_base google-RE squad
+问题: conceptNet 会被Squad覆盖掉
